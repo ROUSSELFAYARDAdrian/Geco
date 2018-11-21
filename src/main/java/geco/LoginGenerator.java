@@ -59,7 +59,15 @@ public class LoginGenerator {
         return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
 
-
+    /**
+     * generate a random string of length length.
+     * @param length of the string generated
+     * @return a random String
+     */
+    public String password_generation(int length) {
+        PasswordGeneration passwordGen = new PasswordGeneration();
+        return passwordGen.generate(length);
+    }
 
 
 

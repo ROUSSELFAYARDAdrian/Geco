@@ -37,4 +37,13 @@ public class LoginGeneratorTest {
         String login = aLoginGenerator.generateLoginForNomAndPrenom("Rolling", "Jean");
         Assert.assertEquals("JROL1", login);
     }
+
+    @Test
+    public void test_password_generation(){
+        int length = 10;
+        String str = aLoginGenerator.password_generation(length);
+        Assert.assertEquals(length, str.length());
+        String str2 = aLoginGenerator.password_generation(length);
+        Assert.assertFalse(str.equals(str2));
+    }
 }
